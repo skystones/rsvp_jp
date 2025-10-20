@@ -13,6 +13,8 @@ controls designed for comfortable reading in Japanese.
   - PDF upload with text extraction.
 - **Japanese Morphological Analysis**: Required for tokenizing Japanese sentences into words.
   - Utilize a state-of-the-art tokenizer (e.g., SudachiPy, MeCab with UniDic, or similar modern tools).
+  - After segmentation, provide an option to merge particles (助詞) with the preceding word so users can
+    choose whether to view them as independent tokens or combined units during RSVP playback.
 - **Display Configuration**:
   - Adjustable context window showing the target word plus 0–3 preceding/following words.
   - Maintain a fixed focal point: the word to read should stay aligned at the same horizontal position.
