@@ -47,9 +47,44 @@ controls designed for comfortable reading in Japanese.
 
 ## Getting Started
 
-1. Clone the repository and install dependencies (tooling TBD during implementation).
-2. Run the test suite to ensure the environment is working.
-3. Follow the TDD workflow when adding new features.
+### Prerequisites
+
+- Node.js 18 or later
+- npm 9 or later
+
+### Installation
+
+```bash
+npm install
+```
+
+### Available Scripts
+
+- `npm run dev`: Start the Vite development server.
+- `npm run build`: Type-check the project and create an optimized production build.
+- `npm run preview`: Preview the production build locally.
+- `npm run test`: Run the Vitest test suite once in CI mode.
+- `npm run test:watch`: Run the Vitest test suite in watch mode for local development.
+
+### Directory Structure
+
+```
+├── index.html               # Vite entry point
+├── src/
+│   ├── components/          # Shared and layout components
+│   ├── features/            # Feature-oriented modules (text input, RSVP player, etc.)
+│   ├── hooks/               # Reusable React hooks
+│   ├── lib/                 # Utilities, API clients, adapters
+│   ├── styles/              # Global style sheets and Tailwind configuration hooks
+│   └── __tests__/           # Unit/component tests colocated by feature
+├── tailwind.config.ts       # TailwindCSS configuration
+├── tsconfig.json            # TypeScript compiler configuration
+├── vite.config.ts           # Vite bundler and Vitest configuration
+└── vitest.setup.ts          # Global test setup
+```
+
+The initial UI (defined in `src/components/layout/AppShell.tsx`) provides
+project guidance and acts as the shell for future feature modules.
 
 Project status: specification phase. Implementation will be guided by this README and the Codex system
 instructions located in `codex/SYSTEM.md`.
